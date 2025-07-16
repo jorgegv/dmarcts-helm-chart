@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  dmarcts:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-07-16T16:04:22.465435753+02:00"
+    description: A Helm chart for DMARCTS tools
+    digest: efb32e8cd5f5f95e4bc12e6ff2a027c03eaeea91e5faff69b0865ed51f7f93b7
+    name: dmarcts
+    type: application
+    urls:
+    - https://jorgegv.github.io/dmarcts-helm-chart/dmarcts-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-07-16T16:04:22.464936487+02:00"
