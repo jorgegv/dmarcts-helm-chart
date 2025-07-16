@@ -1,0 +1,133 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "dmarcts.fullname" . }}
+  labels:
+    {{- include "dmarcts.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "dmarcts.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "dmarcts.labels" . | nindent 8 }}
+        {{- with .Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "dmarcts.serviceAccountName" . }}
+      {{- with .Values.podSecurityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: "{{ .Chart.Name }}"
+          {{- with .Values.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          {{- with .Values.livenessProbe }}
+          livenessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.readinessProbe }}
+          readinessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          env:
+            - name: REPORT_DB_HOST
+              value: "{ .Values.dmarcts.dbHost }"
+            - name: REPORT_DB_TYPE
+              value: "{ .Values.dmarcts.dbType }"
+            - name: REPORT_DB_PORT
+              value: "{ .Values.dmarcts.dbPort }"
+            - name: REPORT_DB_NAME
+              value: "{ .Values.dmarcts.dbName }"
+            - name: REPORT_DB_USER
+              value: "{ .Values.dmarcts.dbUser }"
+            - name: REPORT_DB_PASS
+              value: "{ .Values.dmarcts.dbPassword }"
+            - name: PARSER_IMAP_SERVER
+              value: "{ .Values.dmarcts.parserImapServer }"
+            - name: PARSER_IMAP_PORT
+              value: "{ .Values.dmarcts.parserImapPort }"
+            - name: PARSER_IMAP_USER
+              value: "{ .Values.dmarcts.parserImapUser }"
+            - name: PARSER_IMAP_PASS
+              value: "{ .Values.dmarcts.parserImapPassword }"
+            - name: PARSER_IMAP_READ_FOLDER
+              value: "{ .Values.dmarcts.parserImapReadFolder }"
+            - name: PARSER_IMAP_MOVE_FOLDER
+              value: "{ .Values.dmarcts.parserImapMoveFolder }"
+            - name: PARSER_IMAP_MOVE_FOLDER_ERR
+              value: "{ .Values.dmarcts.parserImapErrorFolder }"
+            - name: PARSER_IMAP_SSL
+              value: "{ .Values.dmarcts.parserImapSsl }"
+            - name: PARSER_IMAP_TLS
+              value: "{ .Values.dmarcts.parserImapTls }"
+            - name: PARSER_IMAP_IGNORE_ERROR
+              value: "{ .Values.dmarcts.parserImapIgnoreError }"
+            - name: PARSER_XML_MAXSIZE
+              value: "{ .Values.dmarcts.parserXmlMaxSize }"
+            - name: PARSER_EXECUTION_HOUR
+              value: "{ .Values.dmarcts.parserCronHour }"
+            - name: PARSER_EXECUTION_MIN
+              value: "{ .Values.dmarcts.parserCronMinute }"
+            - name: PARSER_RUN_ON_STARTUP
+              value: "{ .Values.dmarcts.parserRunOnStartup }"
+            - name: AGGREGATOR_EXECUTION_HOUR
+              value: "{ .Values.dmarcts.aggregatorCronHour }"
+            - name: AGGREGATOR_EXECUTION_MIN
+              value: "{ .Values.dmarcts.aggregatorCronMinute }"
+            - name: AGGREGATOR_DELAY_DAYS
+              value: "{ .Values.dmarcts.aggregatorDelayDays }"
+            - name: PURGER_EXECUTION_HOUR
+              value: "{ .Values.dmarcts.purgerCronHour }"
+            - name: PURGER_EXECUTION_MIN
+              value: "{ .Values.dmarcts.purgerCronMinute }"
+            - name: PURGER_DATA_RETENTION_DAYS
+              value: "{ .Values.dmarcts.purgerRetentionDays }"
+            - name: EXPORTER_PORT
+              value: "{ .Values.dmarcts.exporterPort }"
+      {{- with .Values.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
