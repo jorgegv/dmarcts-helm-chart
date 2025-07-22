@@ -62,59 +62,59 @@ spec:
           {{- end }}
           env:
             - name: REPORT_DB_HOST
-              value: "{ .Values.dmarcts.dbHost }"
+              value: "{{ .Values.dmarcts.dbHost }}"
             - name: REPORT_DB_TYPE
-              value: "{ .Values.dmarcts.dbType }"
+              value: "{{ .Values.dmarcts.dbType }}"
             - name: REPORT_DB_PORT
-              value: "{ .Values.dmarcts.dbPort }"
+              value: "{{ .Values.dmarcts.dbPort }}"
             - name: REPORT_DB_NAME
-              value: "{ .Values.dmarcts.dbName }"
+              value: "{{ .Values.dmarcts.dbName }}"
             - name: REPORT_DB_USER
-              value: "{ .Values.dmarcts.dbUser }"
+              value: "{{ .Values.dmarcts.dbUser }}"
             - name: REPORT_DB_PASS
-              value: "{ .Values.dmarcts.dbPassword }"
+              value: "{{ .Values.dmarcts.dbPassword }}"
             - name: PARSER_IMAP_SERVER
-              value: "{ .Values.dmarcts.parserImapServer }"
+              value: "{{ .Values.dmarcts.parserImapServer }}"
             - name: PARSER_IMAP_PORT
-              value: "{ .Values.dmarcts.parserImapPort }"
+              value: "{{ .Values.dmarcts.parserImapPort }}"
             - name: PARSER_IMAP_USER
-              value: "{ .Values.dmarcts.parserImapUser }"
+              value: "{{ .Values.dmarcts.parserImapUser }}"
             - name: PARSER_IMAP_PASS
-              value: "{ .Values.dmarcts.parserImapPassword }"
+              value: "{{ .Values.dmarcts.parserImapPassword }}"
             - name: PARSER_IMAP_READ_FOLDER
-              value: "{ .Values.dmarcts.parserImapReadFolder }"
+              value: "{{ .Values.dmarcts.parserImapReadFolder }}"
             - name: PARSER_IMAP_MOVE_FOLDER
-              value: "{ .Values.dmarcts.parserImapMoveFolder }"
+              value: "{{ .Values.dmarcts.parserImapMoveFolder }}"
             - name: PARSER_IMAP_MOVE_FOLDER_ERR
-              value: "{ .Values.dmarcts.parserImapErrorFolder }"
+              value: "{{ .Values.dmarcts.parserImapErrorFolder }}"
             - name: PARSER_IMAP_SSL
-              value: "{ .Values.dmarcts.parserImapSsl }"
+              value: "{{ .Values.dmarcts.parserImapSsl }}"
             - name: PARSER_IMAP_TLS
-              value: "{ .Values.dmarcts.parserImapTls }"
+              value: "{{ .Values.dmarcts.parserImapTls }}"
             - name: PARSER_IMAP_IGNORE_ERROR
-              value: "{ .Values.dmarcts.parserImapIgnoreError }"
+              value: "{{ .Values.dmarcts.parserImapIgnoreError }}"
             - name: PARSER_XML_MAXSIZE
-              value: "{ .Values.dmarcts.parserXmlMaxSize }"
+              value: "{{ .Values.dmarcts.parserXmlMaxSize }}"
             - name: PARSER_EXECUTION_HOUR
-              value: "{ .Values.dmarcts.parserCronHour }"
+              value: "{{ .Values.dmarcts.parserCronHour }}"
             - name: PARSER_EXECUTION_MIN
-              value: "{ .Values.dmarcts.parserCronMinute }"
+              value: "{{ .Values.dmarcts.parserCronMinute }}"
             - name: PARSER_RUN_ON_STARTUP
-              value: "{ .Values.dmarcts.parserRunOnStartup }"
+              value: "{{ .Values.dmarcts.parserRunOnStartup }}"
             - name: AGGREGATOR_EXECUTION_HOUR
-              value: "{ .Values.dmarcts.aggregatorCronHour }"
+              value: "{{ .Values.dmarcts.aggregatorCronHour }}"
             - name: AGGREGATOR_EXECUTION_MIN
-              value: "{ .Values.dmarcts.aggregatorCronMinute }"
+              value: "{{ .Values.dmarcts.aggregatorCronMinute }}"
             - name: AGGREGATOR_DELAY_DAYS
-              value: "{ .Values.dmarcts.aggregatorDelayDays }"
+              value: "{{ .Values.dmarcts.aggregatorDelayDays }}"
             - name: PURGER_EXECUTION_HOUR
-              value: "{ .Values.dmarcts.purgerCronHour }"
+              value: "{{ .Values.dmarcts.purgerCronHour }}"
             - name: PURGER_EXECUTION_MIN
-              value: "{ .Values.dmarcts.purgerCronMinute }"
+              value: "{{ .Values.dmarcts.purgerCronMinute }}"
             - name: PURGER_DATA_RETENTION_DAYS
-              value: "{ .Values.dmarcts.purgerRetentionDays }"
+              value: "{{ .Values.dmarcts.purgerRetentionDays }}"
             - name: EXPORTER_PORT
-              value: "{ .Values.dmarcts.exporterPort }"
+              value: "{{ .Values.dmarcts.exporterPort }}"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
