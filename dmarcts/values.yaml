@@ -175,4 +175,5 @@ dmarcts:
 
   # Prometheus exporter configuration
   # port where /metrics URL is exposed, default 9100/tcp
+  # as of now, changing this does nothing, 9100 is hardcoded
   exporterPort: 9100

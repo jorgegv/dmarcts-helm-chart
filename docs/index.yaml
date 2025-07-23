@@ -3,7 +3,17 @@ entries:
   dmarcts:
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-07-23T16:26:44.488801442+02:00"
+    created: "2025-07-23T16:32:57.096554471+02:00"
+    description: A Helm chart for DMARCTS tools
+    digest: 6a1e3ab88bf955a19f661099f267be48c43f8dfe826507962794b0a2de08b81f
+    name: dmarcts
+    type: application
+    urls:
+    - https://jorgegv.github.io/dmarcts-helm-chart/dmarcts-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2025-07-23T16:32:57.096238617+02:00"
     description: A Helm chart for DMARCTS tools
     digest: a07f943699fc6c02c1071031887e31d01814fae03a027837912de39c95bca1bb
     name: dmarcts
@@ -13,7 +23,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-07-23T16:26:44.488448157+02:00"
+    created: "2025-07-23T16:32:57.095912325+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 0f3afc213c2f5cabf05c05b7f61075faccbfa34eba3418a6a7ddbe78caa03cdb
     name: dmarcts
@@ -23,7 +33,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-07-23T16:26:44.487888922+02:00"
+    created: "2025-07-23T16:32:57.095537566+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 9671c032a5cd46e0b1c41c8ed043f5dd36386c8a1ea7a71f548c0f67f3fb9f7c
     name: dmarcts
@@ -33,7 +43,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-07-23T16:26:44.486935682+02:00"
+    created: "2025-07-23T16:32:57.095180952+02:00"
     description: A Helm chart for DMARCTS tools
     digest: f03c4ede1e98c4ebca4384c99c0c0c85a2c997e8958d4e89bb9b651d544c6250
     name: dmarcts
@@ -43,7 +53,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-07-23T16:26:44.486180198+02:00"
+    created: "2025-07-23T16:32:57.094803583+02:00"
     description: A Helm chart for DMARCTS tools
     digest: efb32e8cd5f5f95e4bc12e6ff2a027c03eaeea91e5faff69b0865ed51f7f93b7
     name: dmarcts
@@ -51,4 +61,4 @@ entries:
     urls:
     - https://jorgegv.github.io/dmarcts-helm-chart/dmarcts-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-23T16:26:44.485156967+02:00"
+generated: "2025-07-23T16:32:57.094313798+02:00"
