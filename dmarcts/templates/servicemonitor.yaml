@@ -1,0 +1,26 @@
+{{- if .Values.serviceMonitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "dmarcts.fullname" . }}
+  labels:
+    {{- include "dmarcts.labels" . | nindent 4 }}
+    {{- with .Values.serviceMonitor.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "dmarcts.name" . }}
+  endpoints:
+    - port: http-metrics
+      path: /metrics
+      interval: 15m
+      scheme: http
+      {{- if .Values.prometheusScraping.port }}
+      targetPort: {{ .Values.prometheusScraping.port }}
+      {{- end }}
+  namespaceSelector:
+    matchNames:
+      - {{ .Release.Namespace }}
+{{- end }}
