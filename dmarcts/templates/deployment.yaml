@@ -34,6 +34,12 @@ spec:
       {{- end }}
       containers:
         - name: "{{ .Chart.Name }}"
+
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/usr/bin/supervisorctl", "shutdown"]
+
           {{- with .Values.securityContext }}
           securityContext:
             {{- toYaml . | nindent 12 }}
