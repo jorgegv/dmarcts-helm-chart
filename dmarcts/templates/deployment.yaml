@@ -110,6 +110,8 @@ spec:
               value: "{{ .Values.dmarcts.parserCronMinute }}"
             - name: PARSER_RUN_ON_STARTUP
               value: "{{ .Values.dmarcts.parserRunOnStartup }}"
+            - name: PARSER_DEBUG
+              value: "{{ .Values.dmarcts.parserDebug }}"
             - name: AGGREGATOR_EXECUTION_HOUR
               value: "{{ .Values.dmarcts.aggregatorCronHour }}"
             - name: AGGREGATOR_EXECUTION_MIN
