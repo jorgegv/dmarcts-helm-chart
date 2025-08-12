@@ -16,6 +16,8 @@ spec:
       {{- if .Values.prometheusScraping.port }}
       targetPort: {{ .Values.prometheusScraping.port }}
       {{- end }}
+      protocol: TCP
+      name: http-metrics
     {{- end }}
   selector:
     {{- include "dmarcts.selectorLabels" . | nindent 4 }}
