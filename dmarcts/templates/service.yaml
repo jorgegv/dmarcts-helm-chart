@@ -11,5 +11,11 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    {{- if .Values.serviceMonitor.enabled }}
+    - port: http-metrics
+      {{- if .Values.prometheusScraping.port }}
+      targetPort: {{ .Values.prometheusScraping.port }}
+      {{- end }}
+    {{- end }}
   selector:
     {{- include "dmarcts.selectorLabels" . | nindent 4 }}
