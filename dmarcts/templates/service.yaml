@@ -12,7 +12,7 @@ spec:
       protocol: TCP
       name: http
     {{- if .Values.serviceMonitor.enabled }}
-    - port: {{ .Values.prometheusScraping.port }}
+    - port: {{ .Values.serviceMonitor.port }}
       targetport: http-metrics
       protocol: TCP
       name: http-metrics
