@@ -15,11 +15,9 @@ spec:
   endpoints:
     - port: http-metrics
       path: /metrics
-      interval: 15m
+      interval: 5m
       scheme: http
-      {{- if .Values.prometheusScraping.port }}
-      targetPort: {{ .Values.prometheusScraping.port }}
-      {{- end }}
+      targetPort: {{ .Values.serviceMonitor.port }}
   namespaceSelector:
     matchNames:
       - {{ .Release.Namespace }}

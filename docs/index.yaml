@@ -3,7 +3,17 @@ entries:
   dmarcts:
   - apiVersion: v2
     appVersion: 1.2.5
-    created: "2025-08-13T14:18:19.13920269+02:00"
+    created: "2025-08-13T15:27:37.011378456+02:00"
+    description: A Helm chart for DMARCTS tools
+    digest: 520897c1a99210557b95843d9c2fbd555cb0891a7ee929c3de1cf591db26055d
+    name: dmarcts
+    type: application
+    urls:
+    - https://jorgegv.github.io/dmarcts-helm-chart/dmarcts-0.4.12.tgz
+    version: 0.4.12
+  - apiVersion: v2
+    appVersion: 1.2.5
+    created: "2025-08-13T15:27:37.010912471+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 48024242f552016c4670dab9ef1a524dcc44b3c1a7683ef2a2a42c5ab36f555d
     name: dmarcts
@@ -13,7 +23,7 @@ entries:
     version: 0.4.11
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-08-13T14:18:19.138881607+02:00"
+    created: "2025-08-13T15:27:37.010450584+02:00"
     description: A Helm chart for DMARCTS tools
     digest: ad8749fe45779604587879e70ba342538027e5abe65865db81fcc22616553220
     name: dmarcts
@@ -23,7 +33,7 @@ entries:
     version: 0.4.10
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-08-13T14:18:19.141716266+02:00"
+    created: "2025-08-13T15:27:37.014719999+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 4b17610d0e50fffd18b887a10849d84d5d21c5d1b8fc78cc70d554c42bd430c0
     name: dmarcts
@@ -33,7 +43,7 @@ entries:
     version: 0.4.9
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-08-13T14:18:19.141411412+02:00"
+    created: "2025-08-13T15:27:37.013980851+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 15d8753a2f285c1bf526a7b5e223b1e6f8f2187586056cae7c3698f6005c00fd
     name: dmarcts
@@ -43,7 +53,7 @@ entries:
     version: 0.4.8
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-08-13T14:18:19.141105708+02:00"
+    created: "2025-08-13T15:27:37.013608983+02:00"
     description: A Helm chart for DMARCTS tools
     digest: d844b8d26eadd4f2cd5fae17fc5688b046418d47511f0178b6243cf09f38f596
     name: dmarcts
@@ -53,7 +63,7 @@ entries:
     version: 0.4.7
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2025-08-13T14:18:19.140800414+02:00"
+    created: "2025-08-13T15:27:37.013300163+02:00"
     description: A Helm chart for DMARCTS tools
     digest: ad6a0cb10c2efd4ccd10a175f05fa6fa6001bf999adc43bc76a867c346cff776
     name: dmarcts
@@ -63,7 +73,7 @@ entries:
     version: 0.4.6
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2025-08-13T14:18:19.140467909+02:00"
+    created: "2025-08-13T15:27:37.012968932+02:00"
     description: A Helm chart for DMARCTS tools
     digest: e5f1c825b477f7b2ee976b8ef253795c4878ada6442a950b74ac5e59fa6f385d
     name: dmarcts
@@ -73,7 +83,7 @@ entries:
     version: 0.4.5
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2025-08-13T14:18:19.140161072+02:00"
+    created: "2025-08-13T15:27:37.012636237+02:00"
     description: A Helm chart for DMARCTS tools
     digest: e24f7acc435a92cffcc2fda352a462eb30bfd49cfd2dd951405559b159059d6d
     name: dmarcts
@@ -83,7 +93,7 @@ entries:
     version: 0.4.4
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2025-08-13T14:18:19.139845368+02:00"
+    created: "2025-08-13T15:27:37.012299936+02:00"
     description: A Helm chart for DMARCTS tools
     digest: c7a38d1bd6281f59c10e18bf7bb2fd1549e728bab55a34086742e1ae097d1173
     name: dmarcts
@@ -93,7 +103,7 @@ entries:
     version: 0.4.3
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-08-13T14:18:19.139510118+02:00"
+    created: "2025-08-13T15:27:37.011892501+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 8a2445abf80a2c30b89bb6d779b948669acc05d6d408570591431ff5989fe502
     name: dmarcts
@@ -103,7 +113,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-08-13T14:18:19.138551556+02:00"
+    created: "2025-08-13T15:27:37.009990009+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 6a1e3ab88bf955a19f661099f267be48c43f8dfe826507962794b0a2de08b81f
     name: dmarcts
@@ -113,7 +123,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2025-08-13T14:18:19.138200436+02:00"
+    created: "2025-08-13T15:27:37.009517392+02:00"
     description: A Helm chart for DMARCTS tools
     digest: a07f943699fc6c02c1071031887e31d01814fae03a027837912de39c95bca1bb
     name: dmarcts
@@ -123,7 +133,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2025-08-13T14:18:19.137724311+02:00"
+    created: "2025-08-13T15:27:37.008997275+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 0f3afc213c2f5cabf05c05b7f61075faccbfa34eba3418a6a7ddbe78caa03cdb
     name: dmarcts
@@ -133,7 +143,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-08-13T14:18:19.136896234+02:00"
+    created: "2025-08-13T15:27:37.008144805+02:00"
     description: A Helm chart for DMARCTS tools
     digest: 9671c032a5cd46e0b1c41c8ed043f5dd36386c8a1ea7a71f548c0f67f3fb9f7c
     name: dmarcts
@@ -143,7 +153,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-08-13T14:18:19.136566504+02:00"
+    created: "2025-08-13T15:27:37.007819514+02:00"
     description: A Helm chart for DMARCTS tools
     digest: f03c4ede1e98c4ebca4384c99c0c0c85a2c997e8958d4e89bb9b651d544c6250
     name: dmarcts
@@ -153,7 +163,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2025-08-13T14:18:19.136224892+02:00"
+    created: "2025-08-13T15:27:37.007443097+02:00"
     description: A Helm chart for DMARCTS tools
     digest: efb32e8cd5f5f95e4bc12e6ff2a027c03eaeea91e5faff69b0865ed51f7f93b7
     name: dmarcts
@@ -161,4 +171,4 @@ entries:
     urls:
     - https://jorgegv.github.io/dmarcts-helm-chart/dmarcts-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-13T14:18:19.135731975+02:00"
+generated: "2025-08-13T15:27:37.006985228+02:00"

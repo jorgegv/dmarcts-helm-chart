@@ -124,6 +124,13 @@ tolerations: []
 
 affinity: {}
 
+## Service Monitor
+serviceMonitor:
+  enabled: true
+  port: 9100
+  labels:
+    release: prometheus-operator
+
 # DMARCTS configuration
 #
 # The values defined here are default values.  All values are needed; the
