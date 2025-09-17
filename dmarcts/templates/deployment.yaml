@@ -126,6 +126,8 @@ spec:
               value: "{{ .Values.dmarcts.purgerRetentionDays }}"
             - name: EXPORTER_PORT
               value: "{{ .Values.dmarcts.exporterPort }}"
+            - name: EXPORTER_DELAY_DAYS
+              value: "{{ .Values.dmarcts.exporterDelayDays }}"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}

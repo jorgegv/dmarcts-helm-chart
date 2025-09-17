@@ -170,8 +170,8 @@ dmarcts:
   # hour and minute on which the aggregator will be run each day, default at 10:10am
   aggregatorCronHour: 10
   aggregatorCronMinute: 10
-  # the aggregator will process the data from this days before today, default 1 (yesterday)
-  aggregatorDelayDays: 1
+  # the aggregator will process the data from this days before today, default 2 (day before yesterday)
+  aggregatorDelayDays: 2
 
   # Purger configuration
   # hour and minute on which the purger will be run each day, default at 0:10am
@@ -185,3 +185,5 @@ dmarcts:
   # port where /metrics URL is exposed, default 9100/tcp
   # as of now, changing this does nothing, 9100 is hardcoded
   exporterPort: 9100
+  # The day shown by exporter metrics, this should match aggregatorDelayDays
+  exporterDelayDays: 2
